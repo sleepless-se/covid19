@@ -77,6 +77,15 @@ $ docker-compose run --rm app yarn install
 詳細な手順は[こちら（外部サイト）](https://code.visualstudio.com/docs/remote/containers#_managing-extensions)を参照してください。
 - 開発環境を再構築する場合は、左下部の「Rebuild Container」を実行してください。
 
+### data.json の説明
+
+* patients 使用していない
+* patients_summary その日の感染者数 和歌山県における新型コロナウイルス感染症発生状況](https://www.pref.wakayama.lg.jp/prefg/041200/d00203387.html)で確認
+* inspections_summary 検査数
+※ lastUpdate 感染者情報 [県内の最新感染動向](https://www.pref.wakayama.lg.jp/prefg/000200/covid19.html#01)に合わせる
+
+
+
 ### 本番環境/その他の判定
 
 `process.env.GENERATE_ENV` の値が、本番の場合は`'production'`に、それ以外の場合は `'development'` になっています。  
